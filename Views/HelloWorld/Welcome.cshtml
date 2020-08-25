@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Latest";
+}
+
+<h2>Welcome</h2>
+<ul>
+    @for (int i = 0; i < (int)ViewData["Repeat"]; i++)
+    {
+        <li>@ViewData["Message"]</li>
+    }
+</ul>
+
+<h2>Current Date: @DateTime.Now.ToShortDateString()</h2>
+<h2>Current Time: @DateTime.Now.ToShortTimeString()</h2>
